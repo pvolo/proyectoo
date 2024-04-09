@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+header{
+    background-color: rgb(255, 255, 255);
+    
+}
+header .logo{
+    margin:0;
+    padding:25px 580px;
+    font-weight: bolder;
+    color:orange;
+    font-size:1.5em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: darkred;
+}
+header a:hover{
+    color:red;
+}
+
+header{
+    position:fixed;
+    width: 100%;
+}
+
+
+
+header .container{
+    flex-direction:row ;
+    justify-content: space-between;
+}
+
+h3{
+    color:black;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color:white;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+     ,url("plantel.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+
+}
