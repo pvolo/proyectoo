@@ -68,7 +68,7 @@ body{
   }
    
   .register::after{
-    content: '&amp;gt;';
+    content: '&';
     position: absolute;
     width: 25px;
     height: 25px;
@@ -85,7 +85,7 @@ body{
   }
   
   .login{
-    background-image: linear-gradient(to bottom right, #1ab6b6, #4cac6e);
+    background-image: linear-gradient(to bottom right, rgb(215, 154, 40), #c2c52b);
     padding: 40px;
   }
    
