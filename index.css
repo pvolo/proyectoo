@@ -83,7 +83,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-     ,url("plantel.jpg");
+     ,url("img_index/plantel.jpg");
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center center;
@@ -139,7 +139,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-     ,url("boladios.jpg");
+     ,url("img_index/boladios.jpg");
 }
 
 .carta:nth-child(2){
@@ -148,7 +148,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-     ,url("nikechu.jpg");
+     ,url("img_index/nikechu.jpg");
 }
 
 /*HABILITAR CON RETRO .carta:last-child{
@@ -157,7 +157,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-     ,url("retroNikepng.png");
+     ,url("img_index/retroNikepng.png");
 }*/
 
 #caracteristicas .container{
@@ -242,7 +242,7 @@ background-image: linear-gradient(
     0deg,
     rgb(0,0,0,0.5),
     rgb(0,0,0,0.5)
-), url("boladiosypavez.jpg");
+), url("img_index/boladiosypavez.jpg");
 background-size: cover;
 background-position: center center;
 margin: 10px;
@@ -287,7 +287,7 @@ width: 300px;
 
 
 #caracteristicas{
-    background-image: url("libertadores.jpg");
+    background-image: url("img_index/libertadores.jpg");
     background-repeat: no-repeat;
     margin: 20px;
     background-size: 500px 400px;
