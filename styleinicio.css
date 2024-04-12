@@ -293,6 +293,7 @@ th,td{
 
 .blog-1{
     flex-basis: calc(33.3% - 30px);
+    text-align: center;
 }
 
 .blog-1 img{
