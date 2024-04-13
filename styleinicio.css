@@ -57,6 +57,9 @@ img{
     text-transform: uppercase;
     font-weight: 800;
 }
+.navbar{
+    font-family: 'Oswald', sans-serif;
+}
 
 .menu .navbar ul li{
     position: relative;
@@ -347,6 +350,7 @@ th,td{
         display: initial;
     }
     .menu .navbar{
+
         position: absolute;
         top:100%;
         left: 0;
@@ -366,6 +370,8 @@ th,td{
     #menu:checked ~ .navbar{
         display: initial;
     }
+
+
 
 .logo{
     display: none;
