@@ -16,7 +16,7 @@ function cargarEvenListeners(){
 
 function comprarElemento(e){
     e.preventDefault();
-    if(e.target.classList.contains('agregar-carrito')){
+    if(e.target.classList.contains('agregar-carrito')) {
     const elemento = e.target.parentElement.parentElement;
         leerDatosElemento(elemento);
     }
@@ -41,13 +41,13 @@ function insertarCarrito(elemento) {
             <img src="${elemento.imagen}" width=100 >
         </td>
         <td>
-        ${elemento.titulo}
+            ${elemento.titulo}
         </td>
         <td>
-        ${elemento.precio}
+            ${elemento.precio}
         </td>
         <td>
-        <a herf="#" class="borrar" data-id="${elemento.id}">X </a>
+            <a herf="#" class="borrar" data-id="${elemento.id}">X </a>
         </td>
     `;
     lista.appendChild(row);

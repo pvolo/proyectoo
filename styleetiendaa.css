@@ -27,6 +27,17 @@ img{
 
 }
 
+.zoom-img {
+    width: 100%; 
+    transition: transform 0.3s ease; 
+    cursor:crosshair;
+}
+
+.zoom-img:hover {
+    transform: scale(1.2); 
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -40,6 +51,9 @@ img{
     padding: 70px 0;
 
 }
+
+
+
 
 .menu{
     position: absolute;
@@ -324,6 +338,34 @@ th,td{
     justify-content: space-between;
 }
 
+.form-group label {
+    color: #222;
+    font-weight: 700;
+}
+
+.form-group select {
+    padding: 0.5em;
+    background-color: #f7f7f9;
+    border: none;
+    outline: none;
+    color: #666;
+}
+
+.input-quantity {
+    background-color: #f7f7f9;
+    border: none;
+    padding: 10px;
+    width: 60px;
+    height: 100%;
+    color: #666;
+    font-weight: 500;
+}
+
+.input-quantity:focus {
+    outline: none;
+}
+
+
 .link h3{
     font-size: 18px;
     color: #ffffff;
@@ -454,6 +496,8 @@ th,td{
 
 
 }
+
+
 
 
 
