@@ -39,7 +39,3 @@ ToggleAdditionalInformation.addEventListener('click', () => {
         
         
         })
-
-
-
-
