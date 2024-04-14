@@ -1,42 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/*
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-*/
-
-/*
-font-family: 'Oswald', sans-serif;
-font-family: 'Poppins', sans-serif;
-*/
-
 *{
     margin: 0;
     padding:0 ;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-
 }
+
 body{
     font-family: 'Poppins', sans-serif;
-
 }
 
 img{
     max-width: 100%;
-
 }
 
 .zoom-img {
     width: 100%; 
     transition: transform 0.3s ease; 
-    cursor:crosshair;
+    cursor: crosshair;
 }
 
 .zoom-img:hover {
     transform: scale(1.2); 
 }
-
 
 .container {
     max-width: 1200px;
@@ -49,11 +37,7 @@ img{
     min-height: 80vh;
     background-color: #f5f5f5;
     padding: 70px 0;
-
 }
-
-
-
 
 .menu{
     position: absolute;
@@ -76,11 +60,11 @@ img{
     position: relative;
     float: left;
 }
-.menu .navbar ul li a {
 
+.menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color:orange;
+    color: orange;
     display: block;
 }
 
@@ -99,8 +83,8 @@ img{
 
 .submenu{
     position: relative;
-
 }
+
 .submenu #carrito{
     display: none;
 }
@@ -120,9 +104,11 @@ img{
 table{
     width: 100%;
 }
+
 th,td{
     color:#ffffff;
 }
+
 .borrar{
     background-color: #111111;
     border-radius: 50%;
@@ -140,7 +126,6 @@ th,td{
     flex: 1;
     padding: 0 200px;
 }
-
 
 .header-img{
     flex-basis: 60%;
@@ -173,14 +158,12 @@ th,td{
     background-color: #111111;
     color: #ffffff;
     border-radius: 5px;
-
 }
 
 .ofert {
     padding: 20px 0 0 0;
     display: flex;
     justify-content: space-between;
-
 }
 
 .ofert-1{
@@ -198,20 +181,19 @@ th,td{
 
 .ofert-img img{
     width: 250px;
-
 }
 
 .ofert-txt{
     flex-basis: 50%;
     text-align: center;
 }
+
 .ofert-txt h3{
     color: #111111;
     font-family: 'Oswald',sans-serif;
     font-size: 25px;
     text-transform: uppercase;
     margin-bottom: 15px;
-
 }
 
 .btn-2{
@@ -226,8 +208,8 @@ th,td{
 .product{
     padding: 50px 0;
     text-align: center;
-
 }
+
 .product h2{
     color: #111111;
     font-family: 'Oswald', sans-serif;
@@ -330,7 +312,6 @@ th,td{
 .footer{
     padding: 50px 0;
     background-color: #111111;
-
 }
 
 .footer-content{
@@ -364,7 +345,6 @@ th,td{
 .input-quantity:focus {
     outline: none;
 }
-
 
 .link h3{
     font-size: 18px;
@@ -450,9 +430,11 @@ th,td{
 .product{
     padding: 0 30px 30px 30px;
 }
+
 .product h2{
     margin-bottom: 30px;
 }
+
 .product-content{
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
@@ -472,12 +454,10 @@ th,td{
     margin-bottom: 30px;
 }
 
-
 .blog{
     padding: 0 30px 30px 30px;
     flex-direction: column;
 }
-
 
 .blog-1{
     margin-bottom: 30px;
@@ -491,15 +471,4 @@ th,td{
     flex-direction: column;
     text-align: center;
 }
-
-
-
-
 }
-
-
-
-
-
-
-
