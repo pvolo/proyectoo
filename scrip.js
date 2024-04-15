@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener el botón "Agregar al Carrito"
     var addToCartButtons = document.querySelectorAll(".agregar-carrito");
 
-    // Agregar un evento de clic a cada botón "Agregar al Carrito"
     addToCartButtons.forEach(function(button) {
         button.addEventListener("click", addToCartClicked);
     });
 
-    // Función para manejar el clic en el botón "Agregar al Carrito"
     function addToCartClicked(event) {
         var button = event.target;
         var product = button.parentElement.parentElement.parentElement;
@@ -18,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         agregarAlCarrito(productName, productPrice, productImage);
     }
 
-    // Función para agregar un producto al carrito
     function agregarAlCarrito(nombre, precio, imagen) {
         var cartRow = document.createElement("tr");
         cartRow.innerHTML = `
@@ -30,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
         actualizarTotal();
     }
 
-    // Función para actualizar el total del carrito
     function actualizarTotal() {
         var carritoItemContainer = document.getElementById("lista-carrito");
         var cartRows = carritoItemContainer.getElementsByTagName("tr");
