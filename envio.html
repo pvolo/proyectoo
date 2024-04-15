@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Envío</title>
+    <link rel="stylesheet" href="envio.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Registro de Envío</h1>
+    <form action="pago.html" method="post">
+        <label for="nombre_cliente">Nombre del Cliente:</label>
+        <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+
+        <label for="direccion">Dirección de Envío:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+
+        <label for="region">Region:</label>
+        <select id="region" name="region" required>
+            <option value="">Seleccionar</option>
+            <option value="Argentina">Bio Bio</option>
+            <option value="Brasil">Valparaiso</option>
+            <option value="Chile">Magallanes</option>
+        </select>
+        
+        <input type="submit" value="Enviar Pedido">
+        
+    </form>
+</div>
+
+</body>
+</html>
