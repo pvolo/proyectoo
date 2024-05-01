@@ -8,10 +8,12 @@ body {
 .contenedor {
     width: 80%;
     margin: 50px auto;
+    font-weight: bold;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
 }
 
 h1 {
@@ -46,4 +48,13 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.verificado-img {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100px; 
+    height: auto; 
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Compras</title>
+    <link rel="stylesheet" href="historial.css">
+    <script src="scrip.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="container">
+            <p class="bienvenido">BIENVENIDO NICOLAS</p>
+            <ul>
+                <li><a href="iniciolog.html">Tienda</a></li>
+                <li><a href="indexlog.html">Inicio</a></li>
+                <li><a href="#" onclick="cerrarSesion()" style="color: darkorange;">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h1 style="color: darkorange;">Historial de Compras</h1>
+        <div class="historial">
+            <div class="compra">
+                <img src="../proyectoo/sinFondo/PechoVisitaGr.png" alt="Producto 1">
+                <div class="info">
+                    <p class="date">Fecha: 07 de Mayo de 2024</p>
+                    <p class="product">Producto: Camiseta Visita</p>
+                    <p class="price">Valor: $60.000</p>
+                    <button class="ver-mas" onclick="abrirImagen('comprobantes/comprobantee.png', ' ')">Ver más</button>
+                </div>
+            </div>
+            <div class="compra">
+                <img src="../proyectoo/sinFondo/PechoCalentGr.png" alt="Producto 2">
+                <div class="info">
+                    <p class="date">Fecha: 28 de Abril de 2024</p>
+                    <p class="product">Producto: Camiseta Calentamiento</p>
+                    <p class="price">Precio: $50.000</p>
+                    <button class="ver-mas" onclick="abrirImagen('comprobantes/comprobante.png', ' ')">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="perfil" id="perfil">
+        <img src="../proyectoo/sinFondo/nico.jpg" alt="Foto de perfil">
+        <p class="saludo" style="color: black;">Hola Nicolas</p>
+        <div class="opciones">
+            <ul>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="direccion.html">Direcciones</a></li>
+                <li><a href="pedidos.html" style="color: orange;">° Historias/Pedidos</a></li>
+            </ul>
+        </div>
+    </div>
+    <button onclick="togglePerfil()" style="position: fixed; top: 10px; right: 10px;">=</button>
+
+    <script>
+        function togglePerfil() {
+            var perfil = document.getElementById("perfil");
+            if (perfil.style.display === "none" || perfil.style.display === "") {
+                perfil.style.display = "block";
+            } else {
+                perfil.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -8,13 +8,34 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="rene.css">
   <title>Login</title>
+  <style>
+    .error-message {
+      color: DarkRed;
+      font-size: 12px;
+    }
+  </style>
+  <script>
+    function validarRegistro() {
+      let correo = document.querySelector('.correo').value;
+      let mensajeError = document.getElementById('mensajeError');
+      if (correo.indexOf('@') === -1) {
+        mensajeError.innerHTML = 'Por favor ingresa un correo electrónico válido.';
+        mensajeError.style.display = 'block';
+        return false; 
+      } else {
+        mensajeError.innerHTML = '';
+        mensajeError.style.display = 'none';
+      }
+    }
+  </script>
 </head>
 <body>
    <div class="container">
      <div class="login-container">
        <div class="register">
          <h2  style="color: black;">Iniciar Sesión Admin</h2>
-         <form action="../adminbenja/admin.html">
+         <form action="../adminbenja/admin.html" onsubmit="return validarRegistro()">
+          <p id="mensajeError" class="error-message"></p>
            <input type="text" placeholder="Correo" class="correo">
            <input type="password" placeholder="Contraseña" class="pass">
            <input type="password" placeholder="Confirma contraseña" class="repass">

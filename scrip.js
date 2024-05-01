@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener el botón "Agregar al Carrito"
     var addToCartButtons = document.querySelectorAll(".agregar-carrito");
 
-    // Agregar un evento de clic a cada botón "Agregar al Carrito"
     addToCartButtons.forEach(function(button) {
         button.addEventListener("click", addToCartClicked);
     });
 
-    // Función para manejar el clic en el botón "Agregar al Carrito"
     function addToCartClicked(event) {
         var button = event.target;
         var product = button.parentElement.parentElement.parentElement;
@@ -30,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         actualizarTotal();
     }
 
-    // Función para actualizar el total del carrito
     function actualizarTotal() {
         var carritoItemContainer = document.getElementById("lista-carrito");
         var cartRows = carritoItemContainer.getElementsByTagName("tr");
@@ -44,3 +40,29 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementsByClassName("total-carrito")[0].innerText = "$" + total.toFixed(2);
     }
 });
+
+   
+function cerrarSesion() {
+    var respuesta = confirm("¿Desea cerrar sesión?");
+    if (respuesta) {
+        window.location.href = "index.html";
+    }
+    return false; 
+}
+
+function abrirImagen(urlImagen, descripcion) {
+    var modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    modal.innerHTML = `
+        <img src="${urlImagen}" alt="Imagen Ampliada">
+        <p>${descripcion}</p>
+    `;
+
+    document.body.appendChild(modal);
+
+    modal.onclick = function() {
+        modal.style.display = "none";
+        document.body.removeChild(modal); 
+    };
+}
