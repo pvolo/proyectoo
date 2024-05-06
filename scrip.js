@@ -66,3 +66,41 @@ function abrirImagen(urlImagen, descripcion) {
         document.body.removeChild(modal); 
     };
 }
+
+function guardarDireccion(event) {
+    event.preventDefault();
+    var nombre = document.getElementById("nombreDireccion").value;
+    var calleNumero = document.getElementById("calleNumero").value;
+    var comuna = document.getElementById("comuna").value;
+    var telefono = document.getElementById("telefono").value;
+
+    var nuevaDireccion = document.createElement("div");
+    nuevaDireccion.classList.add("perfil-info");
+    nuevaDireccion.innerHTML = `
+        <div class="info-label">Nombre Dirección:</div>
+        <div class="info-value">${nombre}</div>
+        <div class="info-label">Calle-Nro:</div>
+        <div class="info-value">${calleNumero}</div>
+        <div class="info-label">Comuna:</div>
+        <div class="info-value">${comuna}</div>
+        <div class="info-label">Nro Fono:</div>
+        <div class="info-value">${telefono}</div>
+    `;
+
+    var botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar";
+    botonEliminar.classList.add("eliminar-direccion");
+    botonEliminar.onclick = function() {
+        eliminarDireccion(nuevaDireccion);
+    };
+    nuevaDireccion.appendChild(botonEliminar);
+
+    var contenedorDirecciones = document.querySelector('.direcciones-container');
+    contenedorDirecciones.appendChild(nuevaDireccion);
+
+    document.getElementById("formulario").style.display = "none";
+}
+
+function eliminarDireccion(direccion) {
+    direccion.parentNode.removeChild(direccion);
+}

@@ -15,11 +15,11 @@
      <div class="login-container">
        <div class="register">
          <h2>Registrarse</h2>
-         <form action="../indexlog.html">
-           <input type="text" placeholder="Nombre" class="nombre">
+         <form action="../indexlog.html" onsubmit="return validarRegistro()">
+           <input type="text" placeholder="Nombre" class="nombre" required>
            <input type="email" placeholder="Correo" class="correo" required>
-           <input type="password" placeholder="Contraseña" class="pass">
-           <input type="password" placeholder="Confirma contraseña" class="repass">
+           <input type="password" placeholder="Contraseña" id="pass" class="pass" required>
+           <input type="password" placeholder="Confirma contraseña" id="repass" class="repass" required>
            <input type="submit" class="submit" value="REGISTRARSE">
          </form>
        </div>
@@ -35,5 +35,17 @@
        </div>
      </div>
    </div>
+   <script>
+      function validarRegistro() {
+          var pass = document.getElementById("pass").value;
+          var repass = document.getElementById("repass").value;
+
+          if (pass != repass) {
+              alert("Las contraseñas no coinciden");
+              return false;
+          }
+          return true;
+      }
+   </script>
 </body>
 </html>
