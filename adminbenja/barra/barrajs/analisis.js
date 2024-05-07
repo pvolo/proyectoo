@@ -1,4 +1,3 @@
-// Datos para los gráficos
 var salesData = {
     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     datasets: [{
@@ -32,7 +31,6 @@ var incomeData = {
     }]
 };
 
-// Opciones comunes para los gráficos con tooltips
 var optionsWithTooltip = {
     scales: {
         yAxes: [{
@@ -57,7 +55,6 @@ var optionsWithTooltip = {
     }
 };
 
-// Crear los gráficos con tooltips
 var salesChart = new Chart(document.getElementById('salesChart').getContext('2d'), {
     type: 'line',
     data: salesData,

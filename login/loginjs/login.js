@@ -57,8 +57,7 @@
     }
 
     function enviarFormulario() {
-        //VALIDAMOS EL ENVIO DE NUESTRO FORMULARIO
-
+       
         if (estadoValidacionCampos.userEmail && estadoValidacionCampos.userPassword) {
 
             estadoValidacionCampos.userEmail = false;
@@ -70,7 +69,7 @@
             setTimeout(() => {
                 alertaExito.classList.remove("alertaExito");
 
-            window.location.href = "../../html/index.html"; 
+            window.location.href = "../html/indexlog.html"; 
             }, 3000);
             return;
         }

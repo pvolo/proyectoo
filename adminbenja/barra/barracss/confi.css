@@ -223,9 +223,9 @@ aside .sidebar a span.msg_count {
 main {
     margin-top: 1.4rem;
     width: auto;
-    padding: 20px; /* Agrega un margen interior al main */
-    background-color: #e7e7e7; /* Color de fondo del main */
-    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; 
+    background-color: #e7e7e7; 
+    border-radius: 10px; 
 }
 
 main .container {
@@ -235,8 +235,8 @@ main .container {
 
 .formulario {
     width: 100%;
-    max-width: 400px; /* Ajusta este valor según tus necesidades */
-    margin: 0 auto; /* Centra el formulario */
+    max-width: 400px;
+    margin: 0 auto; 
 }
 
 .main .formulario {
@@ -271,7 +271,7 @@ main .container {
     border: 1px solid #ccc;
 }
 
-/* Estilos para los mensajes de error */
+
 .main .formulario__input-error {
     display: none;
     color: #f00;
@@ -282,7 +282,6 @@ main .container {
     display: block;
 }
 
-/* Estilos para el mensaje de éxito */
 .main .formulario__mensaje-exito {
     display: none;
     color: #0c0;
@@ -293,7 +292,6 @@ main .container {
     display: block;
 }
 
-/* Estilos para el botón de enviar */
 .main .formulario__btn {
     background-color: #007bff;
     color: #fff;
@@ -308,7 +306,6 @@ main .container {
     background-color: #0056b3;
 }
 
-/* Estilos para el contenedor de los mensajes de error y éxito */
 .main .formulario__mensaje {
     display: none;
     padding: 10px;

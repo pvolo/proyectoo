@@ -62,10 +62,10 @@ function eliminarAlerta(referencia) {
 }
 
 function enviarFormulario(form, alertaError, alertaExito) {
-    //VALIDAMOS EL ENVIO DE NUESTRO FORMULARIO
+    
 
     if (estadoValidacionCampos.userName && estadoValidacionCampos.userEmail && estadoValidacionCampos.userPassword) {
-        /*ACTUALIZACION DEL CODIGO - RESETEAMOS A FALSE LAS PROPIEDADES DEL OBJETO*/
+        
         estadoValidacionCampos.userName = false;
         estadoValidacionCampos.userEmail = false;
         estadoValidacionCampos.userPassword = false;
@@ -75,7 +75,7 @@ function enviarFormulario(form, alertaError, alertaExito) {
         alertaError.classList.remove("alertaError");
         setTimeout(() => {
             alertaExito.classList.remove("alertaExito");
-            window.location.href = "../../html/index.html"; 
+            window.location.href = "../html/indexlog.html"; 
         }, 3000);
         return;
     }
