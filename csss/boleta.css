@@ -4,7 +4,31 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+header {
+    background-color: orange;
+    padding: 10px 0;
+}
+.menu {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.menu li:hover > a {
+    background-color: rgb(220, 169, 111);
+}
 .contenedor {
     width: 80%;
     margin: 50px auto;
