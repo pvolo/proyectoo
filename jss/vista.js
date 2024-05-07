@@ -5,7 +5,6 @@ const btnDecrement = document.querySelector('#decrement')
 let valueByDefault = parseInt(inputQuantity.value)
 
 
-//funciones
 
 btnIncrement.addEventListener('click', () => {
     valueByDefault+=1
@@ -20,7 +19,6 @@ btnDecrement.addEventListener('click', () => {
     inputQuantity.value=valueByDefault
 })
 
-//Toggle
 
 const ToggleDescription=document.querySelector('.title-description')
 const ToggleAdditionalInformation=document.querySelector('title-additional-information')
