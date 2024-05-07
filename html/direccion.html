@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direccion</title>
+    <link rel="stylesheet" href="../csss/direccion.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="scrip.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="container">
+            <p class="bienvenido">BIENVENIDO NICOLAS</p>
+
+            <button class="burger" style="margin-top: 80px;">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
+            </button>
+
+            <ul>
+                <li><a href="iniciolog.html">Tienda</a></li>
+                <li><a href="indexlog.html">Inicio</a></li>
+                <li><a href="#" onclick="cerrarSesion()" style="color: darkorange;">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h1 style="color: darkorange;">Direcciones</h1>
+        <div class="perfil-info" id="direccion-existente">
+            <div class="info-label">Nombre Dirección Principal:</div>
+            <div class="info-value">Casa Conce</div>
+            <div class="info-label">Calle-Nro:</div>
+            <div class="info-value">Colo Colo 430</div>
+            <div class="info-label">Comuna:</div>
+            <div class="info-value">Concepción</div>
+            <div class="info-label">Nro Fono:</div>
+            <div class="info-value">+569 5096 3574</div>
+            <button class="eliminar-direccion" onclick="eliminarDireccion(this)">Eliminar</button>
+
+        </div>
+    </div>
+    <div class="sidebar" id="perfil">
+        <h3 style="text-align: center;">Hola Nicolas</h3>
+        <div class="perfil">
+            <img src="../sinFondo/nico.jpg" alt="Foto de perfil">
+        </div>
+        <ul style="margin-top: 20px;text-align: center;">
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Mi Perfil</a></li>
+            <li><a href="#"  style="color: orangered;">Direcciones</a></li>
+        </ul>
+    </div>
+    
+    <script src="../jss/barra.js"></script>
+    <button class="add-direccion" onclick="mostrarFormulario()" style="position: fixed; bottom: 20px; right: 20px;">Añadir Dirección</button>
+
+    <div id="formulario" style="display: none; position: fixed; bottom: 100px; right: 20px; background-color: #fff; padding: 20px; border: 1px solid #ccc;">
+        <h2>Añadir Dirección</h2>
+        <form onsubmit="guardarDireccion(event)">
+            <label for="nombreDireccion">Nombre de Dirección:</label><br>
+            <input type="text" id="nombreDireccion" name="nombreDireccion"><br><br>
+            <label for="calleNumero">Calle y Número:</label><br>
+            <input type="text" id="calleNumero" name="calleNumero"><br><br>
+            <label for="comuna">Comuna:</label><br>
+            <input type="text" id="comuna" name="comuna"><br><br>
+            <label for="telefono">Número de Teléfono:</label><br>
+            <input type="text" id="telefono" name="telefono"><br><br>
+            <button class="add-direccion" type="submit">Guardar Dirección</button>
+        </form>
+    </div>
+
+    <script>
+        function guardarDireccion(event) {
+            event.preventDefault();
+            var nombre = document.getElementById("nombreDireccion").value;
+            var calleNumero = document.getElementById("calleNumero").value;
+            var comuna = document.getElementById("comuna").value;
+            var telefono = document.getElementById("telefono").value;
+
+            var nuevaDireccion = document.createElement("div");
+            nuevaDireccion.classList.add("perfil-info");
+            nuevaDireccion.innerHTML = `
+                <div class="info-label">Nombre Dirección:</div>
+                <div class="info-value">${nombre}</div>
+                <div class="info-label">Calle-Nro:</div>
+                <div class="info-value">${calleNumero}</div>
+                <div class="info-label">Comuna:</div>
+                <div class="info-value">${comuna}</div>
+                <div class="info-label">Nro Fono:</div>
+                <div class="info-value">${telefono}</div>
+            `;
+
+            var contenedorDirecciones = document.getElementById("direccion-existente").parentNode;
+            contenedorDirecciones.appendChild(nuevaDireccion);
+
+            document.getElementById("formulario").style.display = "none";
+        }
+
+        function mostrarFormulario() {
+            document.getElementById("formulario").style.display = "block";
+        }
+
+        function togglePerfil() {
+            var perfil = document.getElementById("perfil");
+            if (perfil.style.display === "none" || perfil.style.display === "") {
+                perfil.style.display = "block";
+            } else {
+                perfil.style.display = "none";
+            }
+        }
+        function eliminarDireccion(elemento) {
+            var direccion = elemento.parentNode;
+            direccion.parentNode.removeChild(direccion);
+        }
+    </script>
+</body>
+</html>

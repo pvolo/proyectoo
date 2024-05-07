@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="barracss/analisis.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+
+<body>
+    <div class="container">
+
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Ad<span class="danger">Colo-Colo</span> </h2>
+                </div>
+                <div class="close" id="close_btn">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+
+                <a href="/admin.html">
+                    <span class="material-symbols-sharp">grid_view </span>
+                    <h3>Panel</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp">person_outline </span>
+                    <h3>Usuario</h3>
+                </a>
+                <a href="analisis.html">
+                    <span class="material-symbols-sharp">insights </span>
+                    <h3>Analisis</h3>
+                </a>
+                <a href="productos">
+                    <span class="material-symbols-sharp">receipt_long </span>
+                    <h3>Productos</h3>
+                </a>
+                <a href="agregarpro.html">
+                    <span class="material-symbols-sharp">add </span>
+                    <h3>Agregar Producto</h3>
+                </a>
+                <a href="/login.html">
+                    <span class="material-symbols-sharp">logout </span>
+                    <h3>Cerrar Sesion</h3>
+                </a>
+            </div>
+
+        </aside>
+        <main>
+            <h1>Analisis</h1>
+            <div class="date">
+                <input type="date" id="fechaInput">
+                <label for="hora">Hora:</label>
+                <input type="text" id="hora" readonly>
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <canvas id="salesChart" width="400" height="200"></canvas>
+                    <div class="middle">
+
+                        <div class="left">
+                            <h3>Total de Ventas</h3>
+                            <h1>$12.500.024</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>80%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <small>Ultimas 24 Horas</small>
+                </div>
+                <div class="expenses">
+                    <canvas id="expensesChart" width="400" height="200"></canvas>
+
+                    <div class="middle">
+
+                        <div class="left">
+                            <h3>Gastos</h3>
+                            <h1>$25.023.131</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>80%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Ultimas 24 Horas</small>
+                </div>
+                <div class="income">
+                    <canvas id="incomeChart" width="400" height="200"></canvas>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Ingreso</h3>
+                            <h1>$50.450.000</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>100%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Ultimas 24 Horas</small>
+                </div>
+            </div>
+            <div class="recent_order">
+                <h2>Top de objetos vendidos</h2>
+                <ul id="topItemsList" class="partial">
+                    <li>Polera Colo-Colo 1998 - Precio: $50.000 <i class="material-icons">trending_up</i></li>
+                    <li>Calcetines Blacos-Negro - Precio: $50.000 <i class="material-icons">trending_up</i></li>
+                    <li>Short Colo-colo 2006 - Precio: $50.000 <i class="material-icons">trending_up</i></li>
+                    <li>Polera Colo-colo negra - Precio: $50.000 <i class="material-icons">trending_up</i></li>
+                    <li>...</li>
+                </ul>
+                <button id="expandButton">Ver más</button>
+            </div>
+            <div class="recent_order">
+                <h2>Top de clientes</h2>
+                <ul id="topClientesList" class="partial">
+                    <li>Juan Perez - Producto: Polera Colo-Colo 1998 - Precio: $50.000 <i class="material-icons">person</i></li>
+                    <li>María González - Producto: Calcetines Blacos-Negro - Precio: $50.000 <i class="material-icons">person</i></li>
+                    <li>Luis Sánchez - Producto: Short Colo-colo 2006 - Precio: $50.000 <i class="material-icons">person</i></li>
+                    <li>Ana Martínez - Producto: Polera Colo-colo negra - Precio: $50.000 <i class="material-icons">person</i></li>
+                    <li>...</li>
+                </ul>
+                <button id="expandClientesButton">Ver más</button>
+            </div>
+        </main>
+
+
+        <div class="right">
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="barrajs/analisis.js"></script>
+    <script src="barrajs/script.js"></script>
+    <script src="barrajs/ver.js"></script>
+    <script src="barrajs/mensaje.js"></script>
+</body>
+
+</html>
