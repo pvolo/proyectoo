@@ -240,6 +240,100 @@ main .date {
     padding: 0.5rem 1.6rem;
 }
 
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid var(--clr-info-dark);
+    padding: 12px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: var(--clr-info-dark);
+    color: var(--clr-info-light);
+}
+
+/* Estilos de los botones de acción */
+.action-button {
+    padding: 10px 20px;
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.action-button:hover {
+    background-color: var(--clr-primary-variant);
+    color: var(--clr-light);
+}
+
+.action-button.delete {
+    background-color: var(--clr-danger);
+}
+
+.action-button.delete:hover {
+    background-color: var(--clr-danger);
+}
+
+.action-button.stock {
+    background-color: var(--clr-warning);
+}
+
+.action-button.stock:hover {
+    background-color: var(--clr-warning);
+}
+
+/* Animación para los botones */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* Estilos para la imagen del producto */
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Estilos para el botón de subir imagen */
+.upload-button {
+    padding: 10px 20px;
+    background-color: var(--clr-success);
+    color: var(--clr-dark);
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: var(--clr-success);
+    color: var(--clr-light);
+}
+
 main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -307,7 +401,55 @@ main .insights h3 {
 
 
 }
+.modal {
+    display: none; /* Oculta la ventana modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+}
 
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; /* Centra verticalmente con un margen */
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 300px; /* Ancho de la ventana modal */
+    height: 350px; /* Alto de la ventana modal */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative;
+}
+
+.modal {
+    display: none; /* Ocultar ventana modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 30%;
+    border-radius: 5px;
+}
+
+
+.error {
+    color: red;
+    font-size: 12px;
+}
 main .insights .progress {
     position: relative;
     height: 68px;

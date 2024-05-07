@@ -107,7 +107,7 @@ body {
 }
 
 .icons i:hover {
-    background-color: #c7c7f3;
+    background-color: #555555;
     color: #fff;
 }
 
@@ -151,7 +151,7 @@ body {
 }
 
 .form input[type="submit"]:hover {
-    background-color: #7a7a9a;
+    background-color: #555555;
 }
 
 .hide {

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtener usuario guardado o crear uno nuevo si no existe
     let usuarioEspecifico = JSON.parse(localStorage.getItem('usuarioEspecifico'));
     if (!usuarioEspecifico) {
         usuarioEspecifico = {
@@ -9,19 +8,26 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('usuarioEspecifico', JSON.stringify(usuarioEspecifico));
     }
 
-    document.getElementById('loginForm').addEventListener('submit', function (event) {
+    document.querySelector('.form-login').addEventListener('submit', function (event) {
         event.preventDefault(); 
         
-        const correo = this.userEmail.value;
-        const contraseña = this.userPassword.value;
+        const correo = this.querySelector('input[name="userEmail"]').value;
+        const contraseña = this.querySelector('input[name="userPassword"]').value;
 
         if (correo === usuarioEspecifico.correo && contraseña === usuarioEspecifico.contraseña) {
             window.location.href = 'admin.html';
         } else {
+            // Agregar lógica para mostrar mensaje de error
+            const errorMensaje = document.createElement('div');
+            errorMensaje.classList.add('alerta-error');
+            errorMensaje.textContent = 'Credenciales incorrectas';
+            this.appendChild(errorMensaje);
+            setTimeout(() => {
+                errorMensaje.remove();
+            }, 3000);
         }
     });
 
-    // Código para la barra lateral
     const links = document.querySelectorAll('.sidebar a');
 
     links.forEach(link => {
@@ -34,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutLink = document.querySelector('.sidebar a[href="login.html"]');
     if (logoutLink) {
         logoutLink.addEventListener('click', function() {
-            // Aquí puedes agregar la lógica para cerrar la sesión
-            // Por ejemplo, puedes eliminar el usuario guardado de Local Storage
             localStorage.removeItem('usuarioEspecifico');
         });
     }
