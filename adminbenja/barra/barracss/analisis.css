@@ -569,7 +569,7 @@ main .recent_order a {
 }
 
 #topItemsList.partial {
-    max-height: 60px; /* Ajustar el tamaño del cuadrado */
+    max-height: 60px; 
     overflow: hidden;
 }
 
@@ -606,12 +606,12 @@ main .recent_order a {
 }
 
 #topItemsList li .price {
-    color: #007bff; /* Color azul para el precio */
+    color: #007bff; 
 }
 
 #topItemsList li .material-icons {
     font-size: 1.2em;
-    color: green; /* Color verde para el icono */
+    color: green; 
 }
 
 #expandButton {
@@ -634,7 +634,7 @@ main .recent_order a {
 }
 
 #topClientesList.partial {
-    max-height: 60px; /* Ajustar el tamaño del cuadrado */
+    max-height: 60px;
     overflow: hidden;
 }
 

@@ -40,9 +40,9 @@ document.getElementById('viewAll').addEventListener('click', function() {
     var newRow = tbody.insertRow(originalTbody.rows.length);
     for (var j = 0; j < originalTbody.rows[0].cells.length - 1; j++) {
         var newCell = newRow.insertCell(j);
-        if (j === 1) { // Product Number
-            newCell.innerText = Math.floor(Math.random() * 10000) + 1; // Generate random number
-        } else if (j === 2) { // Payments
+        if (j === 1) {
+            newCell.innerText = Math.floor(Math.random() * 10000) + 1;
+        } else if (j === 2) {
             var select = document.createElement('select');
             var option1 = document.createElement('option');
             option1.value = 'Pendiente';
@@ -53,7 +53,7 @@ document.getElementById('viewAll').addEventListener('click', function() {
             select.add(option1);
             select.add(option2);
             newCell.appendChild(select);
-        } else if (j === 3) { // Status
+        } else if (j === 3) { 
             var select = document.createElement('select');
             var option1 = document.createElement('option');
             option1.value = 'Pendiente';
@@ -85,7 +85,7 @@ function editOrder(button) {
         input.type = 'text';
         input.value = cells[i].innerText;
         cells[i].innerText = '';
-        if (i === 2) { // Payments
+        if (i === 2) { 
             var select = document.createElement('select');
             var option1 = document.createElement('option');
             option1.value = 'Pendiente';
@@ -97,7 +97,7 @@ function editOrder(button) {
             select.add(option2);
             select.value = input.value;
             cells[i].appendChild(select);
-        } else if (i === 3) { // Status
+        } else if (i === 3) { 
             var select = document.createElement('select');
             var option1 = document.createElement('option');
             option1.value = 'Pendiente';
@@ -117,7 +117,7 @@ function editOrder(button) {
     saveButton.textContent = 'Guardar';
     saveButton.onclick = function() {
         for (var i = 0; i < cells.length - 1; i++) {
-            if (i === 2 || i === 3) { // Payments or Status
+            if (i === 2 || i === 3) {
                 cells[i].innerText = cells[i].getElementsByTagName('select')[0].value;
             } else {
                 cells[i].innerText = cells[i].getElementsByTagName('input')[0].value;
@@ -140,9 +140,9 @@ function addOrder() {
     var newRow = modalTable.insertRow(modalTable.rows.length - 1);
     for (var i = 0; i < modalTable.rows[0].cells.length - 1; i++) {
         var newCell = newRow.insertCell(i);
-        if (i === 1) { // Product Number
-            newCell.innerText = Math.floor(Math.random() * 10000) + 1; // Generate random number
-        } else if (i === 2) { // Payments
+        if (i === 1) { 
+            newCell.innerText = Math.floor(Math.random() * 10000) + 1; 
+        } else if (i === 2) { 
             var select = document.createElement('select');
             var option1 = document.createElement('option');
             option1.value = 'Pendiente';
@@ -173,7 +173,7 @@ function addOrder() {
     saveButton.textContent = 'Guardar';
     saveButton.onclick = function() {
         for (var i = 0; i < newRow.cells.length - 1; i++) {
-            if (i === 2 || i === 3) { // Payments or Status
+            if (i === 2 || i === 3) { 
                 newRow.cells[i].innerText = newRow.cells[i].getElementsByTagName('select')[0].value;
             } else {
                 newRow.cells[i].innerText = newRow.cells[i].getElementsByTagName('input')[0].value;
@@ -204,7 +204,7 @@ function addOrderToMainTable(newRow) {
     var mainRow = mainTable.insertRow(mainTable.rows.length);
     for (var i = 0; i < newRow.cells.length - 1; i++) {
         var newCell = mainRow.insertCell(i);
-        if (i === 2 || i === 3) { // Payments or Status
+        if (i === 2 || i === 3) { 
             newCell.innerText = newRow.cells[i].innerText;
         } else {
             newCell.innerText = newRow.cells[i].innerText;

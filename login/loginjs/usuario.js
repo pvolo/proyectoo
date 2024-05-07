@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
 
             
-            // Agregar lógica para mostrar mensaje de error
+            
             const errorMensaje = document.createElement('div');
             errorMensaje.classList.add('alerta-error');
             errorMensaje.textContent = 'Credenciales incorrectas';
