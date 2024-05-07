@@ -26,7 +26,7 @@
             </div>
             <div class="sidebar">
 
-                <a href="#">
+                <a href="admin.html">
                     <span class="material-symbols-sharp">grid_view </span>
                     <h3>Panel</h3>
                 </a>
@@ -38,15 +38,15 @@
                     <span class="material-symbols-sharp">insights </span>
                     <h3>Analisis</h3>
                 </a>
-                <a href="productos">
+                <a href="barra/api.html">
+                    <span class="material-symbols-sharp">trending_up </span>
+                    <h3>Indicadores económicos</h3>
+                </a>
+                <a href="barra/producto.html">
                     <span class="material-symbols-sharp">receipt_long </span>
                     <h3>Productos</h3>
                 </a>
-                <a href="agregarpro.html">
-                    <span class="material-symbols-sharp">add </span>
-                    <h3>Agregar Producto</h3>
-                </a>
-                <a href="login.html">
+                <a href="../login/login.html">
                     <span class="material-symbols-sharp">logout </span>
                     <h3>Cerrar Sesion</h3>
                 </a>
@@ -124,10 +124,11 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Product Name</th>
-                            <th>Product Number</th>
-                            <th>Payments</th>
-                            <th>Status</th>
+                            <th>Producto</th>
+                            <th>ID Producto</th>
+                            <th>Pagos</th>
+                            <th>Estado</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,7 +162,28 @@
                         </tr>
                     </tbody>
                 </table>
-                <a href="#">Ver todo</a>
+                <a href="#" id="viewAll">Ver todo</a>
+            </div>
+            
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Editar Órdenes</h2>
+                    <table id="modalTable">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product Number</th>
+                                <th>Payments</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Contenido de la tabla se insertará aquí -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
         </main>
@@ -281,6 +303,7 @@
 
 
     <script src="adminjs/script.js"></script>
+    <script src="adminjs/vertoo.js"></script>
 </body>
 
 </html>
